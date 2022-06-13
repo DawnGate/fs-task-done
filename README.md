@@ -40,7 +40,7 @@ Build a Django application with following functionalities
 3. Create Django app with name - unity.
 4. Create a data model to store the emails.
 5. Expose an REST API to be used by the widget to submit the email data.
-6. Create a Django view for listing the emails. Below is a sample Figma design for your reference
+6. Create a Django view for listing the emails. As shown in the figma file for reference : https://www.figma.com/file/CYhfwmtEK4Xm7ZsNM6Swej/Unity?node-id=0%3A1
 7. Bonus - Create a celery periodic task that does what is specified above
 
 ## Submission
