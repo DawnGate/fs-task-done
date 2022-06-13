@@ -3,7 +3,7 @@ Thank you for interviewing with us! Konigle is a collection of tools to help an 
 
 Konigle is a complex product being shipped at very high velocity to solve urgent and important needs for online stores. To help us ship fast, we have architected our product around a tech stack that is simple and well understood. Konigle is a web first product and each seller tool inside Konigle is a Django application with it's own data models and simple UI. 
 
-As a full stack engineer, you would have an opportunity to build, maintain and scale complete seller tools. In order to give you the feel of the actual work that you will be doing, this task in itself is a hypothetical toy seller tool that should take you not more than 4 hours to prototype. Let's call this 
+As a full stack engineer, you would have an opportunity to build, maintain and scale complete seller tools. In order to give you a feel of the actual work that you will be doing, this task in itself is a hypothetical toy seller tool that should take you not more than 4 hours to prototype. Let's call this 
 seller tool --> *Unity*
 
 ## Unity
