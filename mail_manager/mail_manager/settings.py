@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
+    'unity.apps.UnityConfig'
 ]
 
 MIDDLEWARE = [
@@ -47,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware'
 ]
 
 ROOT_URLCONF = 'mail_manager.urls'
@@ -98,6 +102,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# cors advance 
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:9000'
+# ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Internationalization
