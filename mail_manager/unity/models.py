@@ -7,3 +7,7 @@ class SignUpEmail(models.Model):
     # just a simple demo so little restrict is better 
     email = models.EmailField()
     add_date = models.DateTimeField(auto_now_add=True)
+    subcriber = models.BooleanField(default=True)
+
+    class Meta: 
+        ordering = ['-add_date']

@@ -1,0 +1,60 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'unity/index.css' %}"/>
+
+<div class="container body-container">
+    <div class="page-header">
+        <p class="page-header-text">
+            {{"Unity" | upper}}
+        </p>
+        <div class="divide"></div>
+    </div>
+    <div class="month-and-reload">
+        <p>{{ currentMonth }}</p>
+    </div>
+    <div class="overview">
+        <div class="overview-items">
+            <p>Email list</p>
+            <p class="number-text">{{ emailListCount }}</p>
+        </div>
+        <div class="overview-items">
+            <p>New this month</p>
+            <p class="number-text">{{ newThisMonth }}</p>
+        </div>
+        <div class="overview-items">
+            <p>Unsubscribed</p>
+            <p class="number-text">{{ unsubscriber }}</p>
+        </div>
+    </div>
+    <div class="email-list">
+        <table class="table-emails">
+            <thead>
+                <tr>
+                    <th>{{ "email id" | upper }}</th>
+                    <th>Time stamp</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in listEmails %}
+                    <tr>
+                        <td>{{item.email}}</td>
+                        <td>{{item.add_date | timesince}} ago</td>
+                        <td>
+                            {% if item.subcriber %}
+                                Subscribed
+                            {% else %}
+                                Unsubscribed
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- <script type="text/javascript"> 
+    setInterval(()=> {
+        location.reload()
+    }, 5000)
+ </script> -->

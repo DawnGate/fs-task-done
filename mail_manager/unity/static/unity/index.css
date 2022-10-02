@@ -1,0 +1,77 @@
+.container {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.body-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.page-header {
+    padding-top: 30px;
+}
+
+
+.page-header-text {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.divide {
+    border: 0.5px solid black;
+}
+
+.month-and-reload p {
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.overview-items {
+    border: 1px solid black;
+    background-color: #b5b2b2;
+    padding: 0 10px;
+    flex: 1
+}
+
+.number-text {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.email-list {
+    height: 500px;
+    overflow: auto;
+}
+
+.table-emails {
+    margin: 25px 0;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-y: auto;
+}
+
+.table-emails th, td {
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: 300;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.table-emails th:first-child, td:first-child {
+    text-align: left;
+    border-left: none;
+}
+
+
+
+

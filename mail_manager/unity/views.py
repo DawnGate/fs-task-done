@@ -1,4 +1,7 @@
+from datetime import datetime, date
+import django
 from django.shortcuts import HttpResponse, render
+from django import utils
 
 # Create your views here.
 
@@ -9,7 +12,19 @@ from .models import SignUpEmail
 from .serializers import SignUpEmailSerializer
 
 def index(request):
-    return HttpResponse("Hello, World!")
+    currentMonth = date.today().strftime("%B %Y")
+    emailListCount = SignUpEmail.objects.count()
+    newThisMonth = SignUpEmail.objects.filter(add_date__month = utils.timezone.now().month).count()
+    unsubscriber = SignUpEmail.objects.filter(subcriber__exact=False).count()
+    listEmails = SignUpEmail.objects.all()
+    context = {
+        'currentMonth': currentMonth,
+        'emailListCount': emailListCount,
+        'newThisMonth': newThisMonth,
+        'unsubscriber': unsubscriber,
+        'listEmails': listEmails
+    }
+    return render(request, 'unity/listEmailView.html', context)
 
 class getAllSignUpEmail(APIView):
     
