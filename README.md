@@ -52,5 +52,24 @@ Push it to your own git repo and share a link. This way you have a useful, worki
 
 
 
+# Command
 
+Init beat for mail manager
+python3 -m celery -A mail_manager beat -s /Desktop/Doing/challenge/fs-task/beats
 
+Check log
+python3 -m celery -A mail_manager worker -l INFO
+
+using celery with redis
+
+# Describer
+
+working project have name mail-manager
+
+using test.html for widget sender
+
+localhost:8000/unity for view tool => page will reload after 10 second
+
+done with bonus using celery
+
+Working with UTC time

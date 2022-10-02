@@ -26,6 +26,14 @@ def index(request):
     }
     return render(request, 'unity/listEmailView.html', context)
 
+def getNewMailInCurrentMonth():
+    currentMonth = date.today().strftime("%B %Y")
+    newThisMonth = SignUpEmail.objects.filter(add_date__month = utils.timezone.now().month).count()
+    result = 'month: {}, new email subcriber: {}'.format(currentMonth, newThisMonth)
+    print(result)
+    return result
+
+
 class getAllSignUpEmail(APIView):
     
     def get(self, request):
